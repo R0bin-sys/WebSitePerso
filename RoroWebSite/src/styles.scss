@@ -33,3 +33,13 @@ body {
     border: 1px solid var(--mat-sys-outline-variant);
     font: var(--mat-sys-body-large);
 }
+
+// Attribut Secondary
+:root [color="secondary"] {
+    @include mat.button-overrides((filled-container-color: var(--mat-sys-secondary)));
+}
+
+//Attribut Tertiary
+:root [color="tertiary"] {
+    @include mat.button-overrides((filled-container-color: var(--mat-sys-tertiary)));
+}
