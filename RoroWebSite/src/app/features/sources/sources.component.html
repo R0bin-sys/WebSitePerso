@@ -1,0 +1,16 @@
+<h1>Liste des sources/ liens utilisés</h1>
+
+<div class="linkList">
+  @for (source of sourceList; track $index) {
+  <div class="sourceItem">
+    <!-- N° -->
+    <span>{{ source.id }}</span>
+
+    <a href="{{ source.url }}" target="_blank">{{ source.name }}</a>
+
+    @if (source.description != null) {
+    <i>{{ source.description }}</i>
+    }
+  </div>
+  }
+</div>

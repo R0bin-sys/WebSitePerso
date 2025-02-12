@@ -1,0 +1,42 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Charte Graphique de ce site</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h4 class="mt-3">Boutons</h4>
+    <div class="test">
+      <button mat-flat-button color="primary">Primary</button>
+      <button mat-flat-button color="secondary">Secondary</button>
+      <button mat-flat-button color="tertiary">Tertiary</button>
+      <button mat-flat-button color="accent">Accent</button>
+      <button mat-flat-button color="warning">
+        <mat-icon>warning</mat-icon>Warning
+      </button>
+    </div>
+
+    <hr />
+
+    <h4>Texte et couleurs</h4>
+    <div class="colorTest">
+      <p class="primary">TEST 1er texte</p>
+      <div class="box primary"></div>
+      <p class="secondary">TEST 2e texte</p>
+      <div class="box secondary"></div>
+      <p class="tertiary">TEST 3e texte</p>
+      <div class="box tertiary"></div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<!-- MARK: Animation exemple -->
+<div class="mt-3">
+  <h5>Test animations</h5>
+  <nav aria-label="testNav">
+    <button mat-raised-button color="primary" type="button" (click)="toggle()">
+      Toggle Open/Close
+    </button>
+  </nav>
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? "Open" : "Closed" }}!</p>
+  </div>
+</div>
