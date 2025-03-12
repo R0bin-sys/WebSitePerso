@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { SourcesComponent } from '../sources/sources.component';
+import { WavesWrapperComponent } from '../react/waves/WavesWrapper';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +14,11 @@ import { SourcesComponent } from '../sources/sources.component';
     MatButtonModule,
     MatIconModule,
     SourcesComponent,
+    WavesWrapperComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
 })
-export class HomeComponent {}
+export class HomeComponent {
+}
