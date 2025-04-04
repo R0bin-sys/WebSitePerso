@@ -34,6 +34,10 @@ body {
     font: var(--mat-sys-body-large);
 }
 
+:root{
+    --mat-icon-color: var(--mat-sys-on-surface);
+}
+
 // Attribut Secondary
 :root [color="secondary"] {
     @include mat.button-overrides((filled-container-color: var(--mat-sys-secondary)));

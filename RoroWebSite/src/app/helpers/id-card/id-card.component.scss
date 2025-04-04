@@ -1,0 +1,25 @@
+.avatarIcon {
+    background-image: url('/jumba_pic.png');
+    background-size: cover;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        mat-icon{
+            margin-right: 10px;
+        }
+
+        &.map {
+            cursor: pointer;
+        }
+    }
+
+}

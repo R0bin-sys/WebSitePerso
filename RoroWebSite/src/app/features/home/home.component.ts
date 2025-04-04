@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { SourcesComponent } from '../sources/sources.component';
 import { WavesWrapperComponent } from '../react/waves/WavesWrapper';
+import { IdCardComponent } from '../../helpers/id-card/id-card.component';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +14,13 @@ import { WavesWrapperComponent } from '../react/waves/WavesWrapper';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    SourcesComponent,
     WavesWrapperComponent,
+    IdCardComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
 })
 export class HomeComponent {
+  
 }

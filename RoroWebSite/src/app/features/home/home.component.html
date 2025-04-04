@@ -4,10 +4,67 @@
 <!-- TODO: Faire Joli page d'accueil -->
 
 <div class="wavesDiv">
-    <h1 class="wavesText">Robin MARTRES</h1>
-    <app-react-waves></app-react-waves>
+  <h1 class="wavesText">Robin MARTRES</h1>
+  <app-react-waves></app-react-waves>
 </div>
-<app-sources></app-sources>
 
-<!-- <app-react-waves></app-react-waves> -->
+<!-- MARK: Welcome -->
+<div class="whoAmIContainer">
+  <h3><mat-icon>home</mat-icon>Bienvenue chez moi !</h3>
 
+  <div class="detail">
+    <!-- Image de moi -->
+    <div class="imgContainer">
+      <img id="welcomPic" src="doot_meme_squared.png" alt="Ma sale gueule" />
+    </div>
+
+    <div class="txtContainer">
+      <p class="welcomTxt">
+        Bonjour et bienvenue sur mon site,<br />
+        Je suis Robin MARTRES, Développeur Informatique 💻​
+        <br />
+        <br />
+        Ce site faisant office de 1er projet personnel va faire office de
+        vitrine afin de présenter ce que je fait et de grand bac à sable pour
+        contenir mes bricolages de code à venir
+
+        <br />
+        <br />
+
+        En espérant que ce que vous verrez vous intérressera ! ✨
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- MARK: Who Am I -->
+<div class="whoAmIContainer">
+  <h3><mat-icon>emoji_people</mat-icon>Qui suis-je ?</h3>
+
+  <div class="detail">
+    <div class="txtContainer">
+      <p class="welcomTxt">
+        Salut c'est moi,
+        <br />
+        <br />
+
+        <app-id-card [firstName]="'Robin'" [lastName]="'MARTRES'" [subTitle]="'Auteur de ce super site'"></app-id-card>
+
+        <br />
+        <br />
+
+        Vous pouvez voir mon CV en détail juste ci-dessous !
+      </p>
+      <a mat-fab extended href="/me">
+        <mat-icon>description</mat-icon>
+        Voir mon CV
+      </a>
+    </div>
+    <!-- Image de moi -->
+    <div class="imgContainer">
+      <img id="myIdPic" src="/jumba_pic.png" alt="Ma sale gueule" />
+    </div>
+  </div>
+</div>
+
+<!-- Liste des trucs du site -->
