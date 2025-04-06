@@ -34,6 +34,11 @@ export class SourcesComponent implements OnInit {
         name: 'Dribble',
         description: 'Inspiration de designs',
       },
+      {
+          url: 'https://feathericons.com/?query=linked',
+          name: 'Feather Icons',
+          description: 'Icônes open source'
+      },
     ];
 
     let index = 0;

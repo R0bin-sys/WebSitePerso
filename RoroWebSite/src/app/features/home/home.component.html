@@ -1,7 +1,7 @@
 <!-- Page d'accueil / landing page -->
 <!-- Contiendra tout avec bcp de redirections -->
 
-<!-- TODO: Faire Joli page d'accueil -->
+<!-- TODO: Faire Jolie page d'accueil -->
 
 <div class="wavesDiv">
   <h1 class="wavesText">Robin MARTRES</h1>
@@ -10,7 +10,7 @@
 
 <!-- MARK: Welcome -->
 <div class="whoAmIContainer">
-  <h3><mat-icon>home</mat-icon>Bienvenue chez moi !</h3>
+  <h3><mat-icon>home</mat-icon>Bienvenue !</h3>
 
   <div class="detail">
     <!-- Image de moi -->
@@ -48,7 +48,11 @@
         <br />
         <br />
 
-        <app-id-card [firstName]="'Robin'" [lastName]="'MARTRES'" [subTitle]="'Auteur de ce super site'"></app-id-card>
+        <app-id-card
+          [firstName]="'Robin'"
+          [lastName]="'MARTRES'"
+          [subTitle]="'Auteur de ce super site'"
+        ></app-id-card>
 
         <br />
         <br />
@@ -68,3 +72,30 @@
 </div>
 
 <!-- Liste des trucs du site -->
+
+<!-- Pied de page de l'accueuil -->
+<footer>
+  <div class="homeFooter">
+    <!-- Lien vers mes réseaux -->
+    <div class="socials">
+      @for (social of socials; track $index) {
+      <div
+        class="socialContainer"
+        (click)="redirectTo(social.redirectLink)"
+        matTooltip="Ouvrir dans un nouvel onglet"
+      >
+        <mat-icon [svgIcon]="social.icon"></mat-icon>
+        <span>{{ social.name }}</span>
+      </div>
+      }
+    </div>
+    <!-- Plan du site -->
+    <div class="routesContainer">
+      <a href="/me">Mon CV</a>
+      <a href="/about">A propos</a>
+    </div>
+  </div>
+
+  <!-- Année et mon nom -->
+  <p class="credits">2025 - Robin MARTRES</p>
+</footer>

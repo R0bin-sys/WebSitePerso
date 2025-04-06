@@ -3,7 +3,6 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  Input,
   OnChanges,
   OnDestroy,
   Output,
@@ -13,6 +12,9 @@ import {
 } from "@angular/core";
 import Waves from "./Waves";
 import * as React from "react";
+
+
+
 
 import * as ReactDOM from "react-dom";
 

@@ -73,3 +73,40 @@
 
     border: 1px solid white;
 }
+
+.homeFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid;
+
+    .socials {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 10px;
+
+        .socialContainer {
+            cursor: pointer;
+
+            mat-icon {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .routesContainer {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.credits {
+    margin: auto 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
