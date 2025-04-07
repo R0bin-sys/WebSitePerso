@@ -1,13 +1,17 @@
-<h1>Liste des sources/ liens utilisés</h1>
+<h3>Liste des sources/ liens utilisés</h3>
+
+<p>Ce site est construit en Angular</p>
 
 <div class="linkList">
   @for (source of sourceList; track $index) {
   <div class="sourceItem">
     <!-- N° -->
-    <span>{{ source.id }}</span>
+    <span style="display: none">{{ source.id }}</span>
 
+    <!-- Nom  de la source -->
     <a href="{{ source.url }}" target="_blank">{{ source.name }}</a>
 
+    <!-- Description -->
     @if (source.description != null) {
     <i>{{ source.description }}</i>
     }

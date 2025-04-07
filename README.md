@@ -9,5 +9,9 @@ Site Web personnel pour présenter voire +
     - [ ] Ajout du Lanyard
 -   Page de sources
 -   Un peu de responsive
+    - [x] Page d'accueuil
+    - [ ] Page du CV
+    - [ ] Page 'A propos'
 -   Publier le site
+    - [ ] Obtenir un nom de domaine
 -   Créer un premier morceau de back sous node Js ?

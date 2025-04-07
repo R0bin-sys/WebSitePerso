@@ -3,10 +3,8 @@ import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { SourcesComponent } from '../sources/sources.component';
 import { WavesWrapperComponent } from '../react/waves/WavesWrapper';
 import { IdCardComponent } from '../../helpers/id-card/id-card.component';
-import { Router } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
@@ -43,9 +41,7 @@ export class HomeComponent {
   //#endregion Variables
 
   // MARK: CONSTRUCTOR
-  constructor(private readonly router: Router) {
-    console.log(this.router.config);
-  }
+  constructor() {}
 
   /**
    *
