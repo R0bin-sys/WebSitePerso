@@ -13,26 +13,26 @@
     <div class="infoList">
       <!-- Age -->
       @if (age) {
-      <div class="info">
+      <div class="info" matTooltip="Age">
         <mat-icon>cake</mat-icon>
         {{ age }} ans
       </div>
       }
 
       <!-- Job -->
-      <div class="info">
+      <div class="info" matTooltip="Profession">
         <mat-icon>work_outline</mat-icon>
         Développeur Informatique
       </div>
 
       <!-- Localisation -->
-      <div class="info map" matTooltip="Où c'est ?">
+      <div class="info map" (click)="goToMaps()" matTooltip="Où c'est ?">
         <mat-icon>room</mat-icon>
         Brive-La-Gaillarde
       </div>
-      <!-- Spés -->
+
       <!-- Loisir -->
-       <div class="info">
+       <div class="info" matTooltip="loisirs">
         <mat-icon>attractions</mat-icon>
         Musique, Jeux-vidéo, Voyages, ...
        </div>

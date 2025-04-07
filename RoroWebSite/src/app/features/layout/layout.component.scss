@@ -13,8 +13,9 @@
         position: absolute;
         left: 10px;
         top: 2vh;
+        cursor: pointer;
 
-        img{
+        img {
             width: 45px;
             height: 45px;
         }
@@ -43,7 +44,7 @@
                 text-decoration: none;
                 transition: transform .1s ease-in-out;
 
-                mat-icon{
+                mat-icon {
                     margin-right: 5px;
                 }
             }
