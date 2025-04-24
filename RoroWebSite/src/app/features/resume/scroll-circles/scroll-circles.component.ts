@@ -2,7 +2,6 @@ import {
   Component,
   ElementRef,
   OnInit,
-  ViewChild,
   viewChild,
   ViewEncapsulation,
 } from '@angular/core';
@@ -38,6 +37,12 @@ export class ScrollCirclesComponent implements OnInit {
 
     for (let index: number = 0; index < nbCircles; index++) {
       this.addCircle(pctCircle, index);
+      //Le cercle est-il une étape (tous les 250 cercles)
+      if (index % 250 === 0 && index !== 0) {
+        this.addStepCircle(pctCircle, index);
+        }
+        
+        // Gestion du pourcentage de la couleur du cercle
       pctCircle += step;
       if (pctCircle === ceiling || pctCircle === floor) {
         step = -step;
@@ -50,26 +55,38 @@ export class ScrollCirclesComponent implements OnInit {
     let circleDiv = document.createElement('div');
     circleDiv.classList.add('circle');
 
-      
     //   Ajout du simplexNoise
     const c1 = this.noise2D(index * 0.003, index * 0.0033);
     const c2 = this.noise2D(index * 0.002, index * 0.001);
 
     circleDiv.style.transform = `
-    translate(${c2 * 50}px)
-    rotate(${c2 * 400}deg) 
-    scale(${3 + c1 * 3}, ${3 + c2 * 2})
-    `;
+        translate(${c2 * 50}px)
+        rotate(${c2 * 400}deg) 
+        scale(${3 + c1 * 3}, ${3 + c2 * 2})
+        `;
 
     //Couleur du cercle
     circleDiv.style.boxShadow = `0 0 0 .5px color-mix(in srgb, #00df82 ${pctCircle}%, #081616)`;
 
     // Ajout du cercle au contenu
+    this.addElementToMainContainer(circleDiv);
+  }
+
+  private addElementToMainContainer(circleDiv: HTMLDivElement) {
     const element = this.mainContainer();
     element?.nativeElement.appendChild(circleDiv);
 
     this.circlesHtml = this.sanitizer.bypassSecurityTrustHtml(
       element?.nativeElement.outerHTML ?? ''
     );
+  }
+
+  private addStepCircle(pctCircle: number, index: number) {
+    //   Création du cercle
+    let circleDiv = document.createElement('div');
+    circleDiv.classList.add('step-circle', 'circle');
+
+    // Ajout du cercle au contenu
+    this.addElementToMainContainer(circleDiv);
   }
 }
