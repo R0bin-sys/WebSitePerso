@@ -23,17 +23,20 @@ import { createNoise2D } from 'simplex-noise';
 export class ScrollCirclesComponent implements OnInit {
   mainContainer = viewChild<ElementRef<HTMLElement>>('mainContainer');
   circlesHtml!: SafeHtml;
+  noise2D: any;
 
   constructor(private readonly sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
-    const nbCircles = 1500;
-    const ceiling = 100;
-    const floor = 0;
-    let step = 1;
-    let pctCircle = 0;
+    const nbCircles: number = 1500;
+    const ceiling: number = 100;
+    const floor: number = 0;
+    let step: number = 1;
+    let pctCircle: number = 0;
 
-    for (let index = 0; index < nbCircles; index++) {
+    this.noise2D = createNoise2D();
+
+    for (let index: number = 0; index < nbCircles; index++) {
       this.addCircle(pctCircle, index);
       pctCircle += step;
       if (pctCircle === ceiling || pctCircle === floor) {
@@ -47,16 +50,19 @@ export class ScrollCirclesComponent implements OnInit {
     let circleDiv = document.createElement('div');
     circleDiv.classList.add('circle');
 
-    const noise2D = createNoise2D();
-    const c1 = noise2D(index * 0.002, index * 0.002);
-
-      const translate = c1 * 50;
-      console.log(translate);
       
-    circleDiv.style.transform = `translate(${translate}px)`;
+    //   Ajout du simplexNoise
+    const c1 = this.noise2D(index * 0.003, index * 0.0033);
+    const c2 = this.noise2D(index * 0.002, index * 0.001);
+
+    circleDiv.style.transform = `
+    translate(${c2 * 50}px)
+    rotate(${c2 * 400}deg) 
+    scale(${3 + c1 * 3}, ${3 + c2 * 2})
+    `;
 
     //Couleur du cercle
-    circleDiv.style.backgroundColor = `color-mix(in srgb, #00df82 ${pctCircle}%, #081616)`;
+    circleDiv.style.boxShadow = `0 0 0 .5px color-mix(in srgb, #00df82 ${pctCircle}%, #081616)`;
 
     // Ajout du cercle au contenu
     const element = this.mainContainer();
