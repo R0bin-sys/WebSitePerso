@@ -22,4 +22,9 @@ export const routes: Routes = [
     path: 'about',
     component: AboutComponent,
   },
+
+  //Redirections sur GitHub
+  { path: 'WebSitePerso/me', component: ResumeComponent },
+  { path: 'WebSitePerso/graphics', component: GraphicChartComponent },
+  { path: 'WebSitePerso/about', component: AboutComponent },
 ];
