@@ -1,0 +1,38 @@
+#welcomPic {
+    max-width: 4vw;
+    max-height: 10vh;
+    border-radius: 70% 30% 30% 70% / 40% 30% 70% 60%;
+
+    border: 1px solid white;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .resumeTitle {
+        display: flex;
+        max-width: 500px;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+
+        h1 {
+            margin-left: 10px;
+        }
+    }
+
+    .scrollInfo {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 25px;
+
+        mat-icon{
+            margin-right: 10px;
+        }
+    }
+}
