@@ -43,7 +43,7 @@
     }
 
     .step:nth-child(1) {
-        top: calc(8vh + 660px );
+        top: calc(8vh + 660px);
     }
 
     .step:nth-child(2) {
@@ -58,4 +58,16 @@
         top: calc(8vh + 660px + 1560px);
     }
 
+}
+
+@media screen and (max-width: 1000px) {
+    .experiencesContainer {
+        .step {
+            left: 37%;
+
+            p {
+                font-size: smaller;
+            }
+        }
+    }
 }

@@ -36,3 +36,10 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    #welcomPic {
+            max-width: 10vw;
+            max-height: 10vh;
+        }
+}

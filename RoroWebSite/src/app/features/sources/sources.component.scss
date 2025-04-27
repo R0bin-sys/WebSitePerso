@@ -16,3 +16,12 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .linkList {
+
+        .sourceItem {
+            max-width: unset;
+        }
+    }
+}

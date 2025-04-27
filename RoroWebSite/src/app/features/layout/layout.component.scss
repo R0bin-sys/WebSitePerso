@@ -60,3 +60,11 @@
         }
     }
 }
+
+@media screen and (max-width: 380px) {
+    .logoContainer {
+        img {
+            display: none;
+        }
+    }
+}

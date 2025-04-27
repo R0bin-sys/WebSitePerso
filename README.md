@@ -13,10 +13,10 @@ Site Web personnel pour présenter voire +
 -   Page de sources
 -   Un peu de responsive
     -   [x] Page d'accueuil
-    -   [ ] Page du CV
-    -   [ ] Page 'A propos'
+    -   [x] Page du CV
+    -   [x] Page 'A propos'
 -   Publier le site
     -   [x] Deploy sur GitHUb Pages
-        -   [ ] Version stable
+        -   [x] Version stable
     -   [ ] Obtenir un nom de domaine
 -   Créer un premier morceau de back sous node Js ?
