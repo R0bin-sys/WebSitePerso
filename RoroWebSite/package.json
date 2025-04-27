@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:RoroWebSite": "node dist/roro-web-site/server/server.mjs"
+    "serve:ssr:RoroWebSite": "node dist/roro-web-site/server/server.mjs",
+    "build:gitHub": "ng build -c production --base-href \"https://R0bin-sys.github.io/WebSitePerso/\"",
+    "deploy:gitHub": "npx angular-cli-ghpages --dir=dist/roro-web-site/browser",
+    "build-deploy": "npm run build:gitHub && npm run deploy:gitHub"
   },
   "private": true,
   "dependencies": {

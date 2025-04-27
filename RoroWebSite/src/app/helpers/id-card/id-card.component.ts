@@ -25,7 +25,8 @@ export class IdCardComponent implements OnInit {
   public age?: number;
   @Input() public subTitle: string | null = null;
 
-    private readonly briveMaps = 'https://www.google.com/maps/place/19100+Brive-la-Gaillarde/@45.1450666,1.4731744,13z/data=!3m1!4b1!4m6!3m5!1s0x47f8bd494a823efb:0x405d39260ee76f0!8m2!3d45.1622927!4d1.5267596!16zL20vMDRiamZ2?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D';
+  private readonly briveMaps =
+    'https://www.google.com/maps/place/19100+Brive-la-Gaillarde/@45.1450666,1.4731744,13z/data=!3m1!4b1!4m6!3m5!1s0x47f8bd494a823efb:0x405d39260ee76f0!8m2!3d45.1622927!4d1.5267596!16zL20vMDRiamZ2?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D';
 
   constructor() {}
   ngOnInit(): void {
@@ -38,9 +39,6 @@ export class IdCardComponent implements OnInit {
   }
 
   goToMaps() {
-    window.open(
-      this.briveMaps,
-      '_blank'
-    );
+    window.open(this.briveMaps, '_blank');
   }
 }
